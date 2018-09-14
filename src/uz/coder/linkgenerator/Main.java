@@ -1,8 +1,10 @@
 package uz.coder.linkgenerator;
 
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Config cfg = new Config();
-        String dbname = cfg.getProperty("mDbUser");
+        System.out.println(cfg.getPropValues());
     }
 }
