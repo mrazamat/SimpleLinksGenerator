@@ -8,9 +8,10 @@ public class Config {
     public Config() {
         configFile = new java.util.Properties();
         try {
-            configFile.load(this.getClass().getClassLoader().getResourceAsStream("config.cfg"));
-        } catch (Exception e) {
-            e.printStackTrace();
+            configFile.load(this.getClass().getClassLoader().
+                    getResourceAsStream("config.cfg"));
+        } catch (Exception eta) {
+            eta.printStackTrace();
         }
     }
 
