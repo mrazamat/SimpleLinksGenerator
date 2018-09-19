@@ -1,6 +1,7 @@
 package uz.coder.linkgenerator;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -11,13 +12,16 @@ public class Main {
         url=url.trim();
 
 
+        String text = "";
 
-        for (int i = 1; i < count; i++) {
-            System.out.println("<p>" +
+        for (int i = 1; i <= count; i++) {
+            text+=("<p>" +
                     "<a href=\""  + url + i +".jpg\" data-fancybox=\"gallery\">" +
                     "<img class=\"img-fluid\" src=\"" + url + i +".jpg\"/>" +
                     "</a>" +
                     "</p>\n");
         }
+        FileWrite write = new FileWrite();
+        write.writeData(text);
     }
 }
